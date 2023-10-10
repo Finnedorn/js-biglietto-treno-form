@@ -33,7 +33,7 @@ console.dir(cancbtn);
 
 generatebtn.addEventListener('click', 
     function() {
-        //dichiaro le const coinvolte dall0interazioe col bottone
+        //dichiaro le const coinvolte dall'interazioe col bottone
         const namesur = document.getElementById('nome').value;
         const km = document.getElementById('km').value;
         const age = document.getElementById('eta').value;
@@ -90,5 +90,13 @@ generatebtn.addEventListener('click',
             ticket.classList.remove('d-none');
         }
 
+    }
+);
+
+//adesso setto la funzione del bottone annulla 
+
+cancbtn.addEventListener('click', 
+    function(){
+        location.reload();
     }
 );
