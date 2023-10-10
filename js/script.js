@@ -36,10 +36,21 @@ generatebtn.addEventListener('click',
         const namesur = document.getElementById('nome').value;
         const km = document.getElementById('km').value;
         const age = document.getElementById('eta').value;
+        //in caso di null parte l'alert
         if (namesur === '' || km === '' || age === '') {
-            alert ('Inserisci dei dati corretti!')
-        } else {
+            alert ('Inserisci dei dati corretti!');
             
+            //console.log(namesur, km, age);
+
+        } else {
+            //in ogni altro caso prendo le classi degli elementi in cui riporterò i valori
+            const ticket = document.querySelector('.d-none');
+            const passenger = document.getElementById('passeggero');
+            const category = document.getElementById('offerta');
+            const place = document.getElementById('carrozza');
+            const cost = document.getElementById('costo');
+
+            //console.log(ticket, passenger, category, place, cost);
         }
 
     }
