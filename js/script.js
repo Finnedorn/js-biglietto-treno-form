@@ -25,6 +25,8 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 
 const generatebtn = document.querySelector('.generatebtn');
 const cancbtn = document.querySelector('.cancelbtn');
+const ticket = document.getElementById('ticketwrapper');
+
 
 /*
 console.dir(generatebtn);
@@ -47,7 +49,6 @@ generatebtn.addEventListener('click',
         } else{
 
             //in ogni altro caso prendo le classi degli elementi in cui riporterò i valori
-            const ticket = document.querySelector('.d-none');
             const passenger = document.getElementById('passeggero');
             const category = document.getElementById('categoria');
             const codex = document.getElementById('codice');
@@ -94,14 +95,12 @@ generatebtn.addEventListener('click',
 
 //adesso setto la funzione del bottone annulla 
 
-
 cancbtn.addEventListener('click', 
     function(){
         //dichiaro le const coinvolte dall'interazioe col bottone
         const namesur = document.getElementById('nome').value = '';
         const km = document.getElementById('km').value = '';
         const age = document.getElementById('eta').value = '';
-        const ticket = document.querySelector('.d-none');
 
         ticket.classList.add('d-none');
     }
