@@ -39,7 +39,7 @@ generatebtn.addEventListener('click',
         const age = document.getElementById('eta').value;
 
         //in caso di null parte l'alert
-        if (namesur === '' || km === '' || age === '') {
+        if (namesur === '' || isNaN(km) || km === '' || age === '') {
             alert ('Inserisci dei dati corretti!');
             
             //console.log(namesur, km, age);
@@ -89,14 +89,20 @@ generatebtn.addEventListener('click',
             //rimuoviamo il d none dal biglietto
             ticket.classList.remove('d-none');
         }
-
     }
 );
 
 //adesso setto la funzione del bottone annulla 
 
+
 cancbtn.addEventListener('click', 
     function(){
-        location.reload();
+        //dichiaro le const coinvolte dall'interazioe col bottone
+        const namesur = document.getElementById('nome').value = '';
+        const km = document.getElementById('km').value = '';
+        const age = document.getElementById('eta').value = '';
+        const ticket = document.querySelector('.d-none');
+
+        ticket.classList.add('d-none');
     }
 );
