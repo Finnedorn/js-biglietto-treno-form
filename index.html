@@ -11,20 +11,84 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container-fluid bg-danger">
-        <h2 class="text-light text-center">
+    <div class="container-fluid vh-100 bg-danger">
+        <!--form-->
+        <h2 class="text-light text-center py-4">
             CALCOLA IL PREZZO DEL TUO BIGLIETTO
         </h2>
-        <div class="container border-3 bg-light">
-            <div class="row">
+        <div class="container rounded-4 bg-light shadow-lg p-4">
+            <div class="row py-4">
                 <div class="col-4">
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Nome</label>
-                        <input type="email" class="form-control" id="nome" placeholder="" value="" name="nome">
+                    <div class="mb-3 text-danger">
+                        <label for="exampleFormControlInput1" class="form-label">Nome e Cognole</label>
+                        <input type="text" class="form-control" id="nome" placeholder="es:Daniele Giuntoli" value="nome" name="nome">
                     </div>
                 </div>
-                <div class="col-4"></div>
-                <div class="col-4"></div>
+                <div class="col-4">
+                    <div class="mb-3 text-danger">
+                        <label for="exampleFormControlInput1" class="form-label">Km da percorrere</label>
+                        <input type="text" class="form-control" id="km" placeholder="es:100" value="km" name="km">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <label for="eta" class="form-label text-danger">Fascia d'età</label>
+                    <div class="mb-3 text-danger">
+                        <select name="eta" id="eta">
+                            <option value="">Seleziona</option>
+                            <option value="under">Under 18</option>
+                            <option value="middle">18-65 anni</option>
+                            <option value="over">Over 65</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3 d-flex justify-content-center py-2">
+                    <button class="btn btn-secondary text-light me-4">Genera</button>
+                    <button class="btn btn-secondary text-light">Annulla</button>
+                </div>
+            </div>
+        </div>
+        <!--biglietto generato-->
+        <div class="">
+            <h2 class="text-light text-center py-3">
+                IL TUO BIGLIETTO
+            </h2>
+            <div class="container rounded-4 bg-light shadow-lg">
+                <h3 class="text-black py-2">
+                    Dettaglio Passeggeri
+                </h3>
+                <div class="row py-4">
+                    <div class="col-3">
+                        <div class="mb-3 text-black bg-secondary passeggero rounded-3">
+                            <!--inserire nome passeggero-->
+                            <h3 class="p-2">
+                                Nome Passeggero
+                            </h3>
+                            <h4 class="passeggero">
+
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <table class="table table-borderless table-light">
+                            <thead>
+                              <tr>
+                                <th scope="col">Offerta</th>
+                                <th scope="col">Carrozza</th>
+                                <th scope="col">Codice CP</th>
+                                <th scope="col">Costo Biglietto</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="offerta"></td>
+                                <td class="carrozza"></td>
+                                <td class="codice"></td>
+                                <td class="costo"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
