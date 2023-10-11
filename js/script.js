@@ -67,7 +67,7 @@ generatebtn.addEventListener('click',
             if (age === 'under') {
                 tax = tax - (tax * 20/100);
                 cost.innerHTML= tax.toFixed(2) + ' €';
-                category.innerHTML = "Sconto Under 18"
+                category.innerHTML = "Sconto Under 18";
             } else if (age === 'over') {
                 tax = tax - (tax * 40/100);
                 cost.innerHTML= tax.toFixed(2) + ' €';
@@ -105,3 +105,4 @@ cancbtn.addEventListener('click',
         ticket.classList.add('d-none');
     }
 );
+
